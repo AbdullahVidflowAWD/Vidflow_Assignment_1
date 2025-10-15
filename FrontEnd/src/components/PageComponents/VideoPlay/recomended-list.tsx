@@ -18,7 +18,7 @@ export function RecommendedList({
   return (
     <div className={cn("grid gap-4", className)}>
       {items.map((v) => (
-        <Link key={v.id} to="#" className="group grid grid-cols-[168px_minmax(0,1fr)] gap-3">
+        <Link key={v.id} to="#" className="group grid grid-cols-[168px_minmax(0,1fr)] gap-3 glassy-hover py-2 px-1 rounded-md">
           <div className="relative h-[94px] w-[168px] overflow-hidden rounded-md bg-muted">
             {/* Using img instead of next/image to keep it simple in Next.js */}
             <img
@@ -31,7 +31,7 @@ export function RecommendedList({
             </span>
           </div>
           <div className="min-w-0">
-            <h3 className="line-clamp-2 text-sm font-medium leading-snug group-hover:underline">{v.title}</h3>
+            <h3 className="line-clamp-2 text-sm font-medium ">{v.title}</h3>
             <p className="mt-1 truncate text-xs text-muted-foreground">{v.channel}</p>
             <p className="truncate text-xs text-muted-foreground">{v.views}</p>
           </div>

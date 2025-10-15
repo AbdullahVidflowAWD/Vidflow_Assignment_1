@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Play } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 interface VideoCardProps {
   thumbnail: string
@@ -21,8 +22,13 @@ export default function VideoCard({
   timeAgo,
   verified
 }: VideoCardProps) {
+
+  const navigate = useNavigate()
+
   return (
-    <Card className="group relative overflow-hidden border-0 shadow-none bg-transparent hover:scale-[1.02] transition-transform duration-300">
+    <Card 
+onClick={()=>navigate("/X")}
+className="group relative overflow-hidden border-0 shadow-none bg-transparent hover:scale-[1.02] transition-transform duration-300">
       <CardContent className="p-0">
         {/* Thumbnail */}
         <div className="relative w-full overflow-hidden rounded-xl">
@@ -50,7 +56,7 @@ export default function VideoCard({
           {/* Channel Avatar */}
           <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
             <img
-              src={`https://api.dicebear.com/9.x/initials/svg?seed=${channel}`}
+              src={`/AboutBg.png`}
               alt={channel}
               className="w-full h-full object-cover"
             />

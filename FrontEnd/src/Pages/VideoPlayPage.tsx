@@ -43,7 +43,7 @@ Links
     channel: i % 2 === 0 ? "UI Patterns" : "Data Wizards",
     views: i % 2 === 0 ? "342K views" : "128K views",
     time: i % 2 === 0 ? "12:08" : "8:45",
-    thumbnail: `/placeholder.svg?height=160&width=280&query=${encodeURIComponent("video thumbnail " + (i + 1))}`,
+    thumbnail: `/Unreal.webp`,
   }))
 
   const initialComments = [
