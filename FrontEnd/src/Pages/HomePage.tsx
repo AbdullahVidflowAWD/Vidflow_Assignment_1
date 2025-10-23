@@ -30,7 +30,7 @@ const videos = [
   },
 ]
 
-export default function VideoGrid() {
+export default function HomePage() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {videos.map((video, i) => (
